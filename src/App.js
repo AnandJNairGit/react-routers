@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./pages/About";
 import Book from "./pages/Book";
@@ -9,10 +9,18 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
+    <nav>
+      <ul>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/book-list">BookList</Link></li>
+
+
+      </ul>
+    </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/book" element={<Book />} />
+        <Route path="/book/:id" element={<Book />} />
         <Route path="/book-list" element={<BookList />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

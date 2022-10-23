@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const Book = () => {
-  return (
-    <div>Book</div>
-  )
-}
+  const { id } = useParams();
+  console.log("------------->", useParams());
+  return <div>this is book-{id} </div>;
+};
 
-export default Book
+export default Book;
