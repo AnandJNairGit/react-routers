@@ -9,7 +9,7 @@ const BookLayout = () => {
       <Link to="/books/2">book-2</Link>
       <br />
       <Link to="/books/new">new-book</Link>
-      <Outlet />
+      <Outlet context={{data:"this is context data"}}/>
     </>
   );
 };
