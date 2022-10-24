@@ -22,14 +22,14 @@ function App() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/books">BookList</Link>
+            <Link to="/books" replace>BookList</Link>
           </li>
         </ul>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/books/*" element={<BookRoutes />}>
+        <Route path="/books/*" replace element={<BookRoutes />}>
           {/* <Route index element={<BookList />} />
           <Route path=":id" element={<Book />} />
           <Route path="new" element={<NewBook />} /> */}
